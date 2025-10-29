@@ -13,7 +13,7 @@ Time spent: 2 hours spent in total
 
 This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **short description of your app**
 
-If we had to describe this milestone in three (3) emojis, they would be: **emojis here**
+If we had to describe this milestone in three (3) emojis, they would be: 💪🏼 🏋 🔋🎧
 
 ## Milestone Requirements
 
@@ -21,8 +21,8 @@ If we had to describe this milestone in three (3) emojis, they would be: **emoji
 
 The following REQUIRED features are completed:
 
-- [ ] Creation of GitHub Organization and Group Project Repo
-- [ ] Updated Course Portal group info with Group Name and App Description
+- [x] Creation of GitHub Organization and Group Project Repo
+- [x] Updated Course Portal group info with Group Name and App Description
 
 The following REQUIRED files are included:
 

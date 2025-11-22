@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+
+    <!-- Bottle outline -->
+    <path
+        android:pathData="M12,2 L20,2 L20,5 L12,5 Z"
+        android:fillColor="#0EA5E9" />
+
+    <path
+        android:pathData="M13,5 L13,8 Q10,9 10,11 L10,28 Q10,30 12,30 L20,30 Q22,30 22,28 L22,11 Q22,9 19,8 L19,5"
+        android:strokeWidth="1.5"
+        android:strokeColor="#0EA5E9"
+        android:fillColor="#00000000" />
+
+    <!-- Half water fill -->
+    <path
+        android:pathData="M10.5,19 L21.5,19 L21.5,28 Q21.5,29.5 20,29.5 L12,29.5 Q10.5,29.5 10.5,28 Z"
+        android:fillColor="#7DD3FC" />
+
+</vector>

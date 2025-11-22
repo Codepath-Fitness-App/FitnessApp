@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="24dp">
+
+    <!-- Header Section with Water Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:text="Daily Activity"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/waterButton"
+            android:src="@drawable/bottleicon"
+            android:background="@drawable/icon_button_background"
+            android:padding="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Water tracker"
+            android:name=".WaterTrackerActivity"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="Keep moving forward!"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Main Step Counter Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Circular Progress Container -->
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp">
+
+                <ProgressBar
+                    android:id="@+id/stepProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/circular_progress"
+                    android:rotation="-90" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/footprint"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:tint="#6366F1"
+                        android:contentDescription="Steps icon" />
+
+                    <TextView
+                        android:id="@+id/stepCountTextView"
+                        android:text="0"
+                        android:textSize="42sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E293B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="steps today"
+                        android:textSize="14sp"
+                        android:textColor="#94A3B8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Goal indicator -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/dot_indicator" />
+
+                <TextView
+                    android:text="Goal: 10,000 steps"
+                    android:textSize="13sp"
+                    android:textColor="#64748B"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/refreshButton"
+        android:text="Refresh Steps"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@drawable/button_primary"
+        android:paddingVertical="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/chartButton"
+        android:text="View Charts"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@drawable/button_outline"
+        android:paddingVertical="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/openChartButton"
+        android:text="View Weekly Chart"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@drawable/button_outline"
+        android:paddingVertical="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

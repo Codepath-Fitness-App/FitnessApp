@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="280dp"
+    android:viewportWidth="140"
+    android:viewportHeight="280">
+
+    <path
+        android:pathData="M50,0 L90,0 L90,20 L50,20 Z"
+        android:strokeWidth="3"
+        android:strokeColor="#CBD5E1"
+        android:fillColor="#00000000" />
+
+    <!-- Bottle neck -->
+    <path
+        android:pathData="M55,20 L55,45 Q55,50 45,55 L45,55"
+        android:strokeWidth="3"
+        android:strokeColor="#CBD5E1"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M85,20 L85,45 Q85,50 95,55 L95,55"
+        android:strokeWidth="3"
+        android:strokeColor="#CBD5E1"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M25,55
+                         Q15,55 15,70
+                         L15,250
+                         Q15,270 35,270
+                         L105,270
+                         Q125,270 125,250
+                         L125,70
+                         Q125,55 115,55
+                         L95,55
+                         M45,55 L25,55"
+        android:strokeWidth="3"
+        android:strokeColor="#CBD5E1"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M25,100 L35,100"
+        android:strokeWidth="2"
+        android:strokeColor="#E2E8F0" />
+    <path
+        android:pathData="M25,150 L35,150"
+        android:strokeWidth="2"
+        android:strokeColor="#E2E8F0" />
+    <path
+        android:pathData="M25,200 L35,200"
+        android:strokeWidth="2"
+        android:strokeColor="#E2E8F0" />
+
+</vector>

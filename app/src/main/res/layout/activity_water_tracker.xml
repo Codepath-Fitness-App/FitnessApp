@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Go back" />
+
+        <TextView
+            android:text="Water Intake"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Water Bottle Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <!-- Bottle Container -->
+            <FrameLayout
+                android:id="@+id/bottleContainer"
+                android:layout_width="140dp"
+                android:layout_height="280dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <!-- Water Fill (this view's height changes programmatically) -->
+                <View
+                    android:id="@+id/waterFillView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/water_fill_background" />
+
+                <!-- Bottle Outline Overlay -->
+                <ImageView
+                    android:src="@drawable/bottle_outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Water bottle" />
+
+            </FrameLayout>
+
+            <!-- Amount Display -->
+            <LinearLayout
+                android:id="@+id/amountDisplay"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottleContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/waterAmountTextView"
+                    android:text="0 ml"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#0EA5E9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/waterGoalTextView"
+                    android:text="of 2000 ml goal"
+                    android:textSize="14sp"
+                    android:textColor="#94A3B8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- Percentage Badge -->
+            <TextView
+                android:id="@+id/percentageTextView"
+                android:text="0%"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/percentage_badge"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Quick Add Section -->
+    <TextView
+        android:text="Quick Add"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+
+
+        <!-- One-Third Bottle Button -->
+        <LinearLayout
+            android:id="@+id/addThirdBottleButton"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/button_water_outline"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_bottle_third"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="One-third bottle" />
+
+            <TextView
+                android:text="1/3 Bottle"
+                android:textSize="12sp"
+                android:textColor="#0EA5E9"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="167ml"
+                android:textSize="10sp"
+                android:textColor="#94A3B8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <!-- Half Bottle Button -->
+        <LinearLayout
+            android:id="@+id/addHalfBottleButton"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/button_water_outline"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:src="@drawable/ic_bottle_half"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Half bottle" />
+
+            <TextView
+                android:text="Half Bottle"
+                android:textSize="12sp"
+                android:textColor="#0EA5E9"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="250ml"
+                android:textSize="10sp"
+                android:textColor="#94A3B8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- Full Bottle Button -->
+        <LinearLayout
+            android:id="@+id/addFullBottleButton"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/button_water_outline"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:src="@drawable/ic_bottle_full"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Full bottle" />
+
+            <TextView
+                android:text="1 Bottle"
+                android:textSize="12sp"
+                android:textColor="#0EA5E9"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="500ml"
+                android:textSize="10sp"
+                android:textColor="#94A3B8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Custom Add Button -->
+    <Button
+        android:id="@+id/customAddButton"
+        android:text="Add Custom Amount"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@drawable/button_water_primary"
+        android:paddingVertical="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetWaterButton"
+        android:text="Reset Today"
+        android:textSize="14sp"
+        android:textColor="#94A3B8"
+        android:textAllCaps="false"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

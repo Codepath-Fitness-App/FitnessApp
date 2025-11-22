@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "441369701090",
+    "project_id": "socialapp-97f16",
+    "storage_bucket": "socialapp-97f16.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441369701090:android:2c52da5ce8483390ce4cbb",
+        "android_client_info": {
+          "package_name": "com.example.trackerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Lxe6aG-p5B4yhp2lGh7tqq7Fyzx2ZAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

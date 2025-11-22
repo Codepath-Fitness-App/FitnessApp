@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circular_progress.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background ring -->
+    <item>
+        <shape android:shape="ring"
+            android:thickness="12dp"
+            android:useLevel="false">
+            <solid android:color="#E2E8F0" />
+        </shape>
+    </item>
+    <!-- Progress ring -->
+    <item>
+        <rotate
+            android:fromDegrees="0"
+            android:toDegrees="360">
+            <shape android:shape="ring"
+                android:thickness="12dp"
+                android:useLevel="true">
+                <gradient
+                    android:startColor="#6366F1"
+                    android:endColor="#8B5CF6"
+                    android:type="sweep" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

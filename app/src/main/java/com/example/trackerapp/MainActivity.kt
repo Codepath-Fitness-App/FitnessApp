@@ -30,10 +30,17 @@ class MainActivity : AppCompatActivity() {
 
         checkActivityRecognitionPermission()
 
+        // View Weekly Chart button
         binding.openChartButton.setOnClickListener {
             startActivity(Intent(this, ChartActivity::class.java))
         }
 
+        // View Charts button
+        binding.chartButton.setOnClickListener {
+            startActivity(Intent(this, ChartActivity::class.java))
+        }
+
+        // Refresh Steps button
         binding.refreshButton.setOnClickListener {
             loadDailySteps()
         }
@@ -70,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     private fun loadDailySteps() {
         fitManager.readDailySteps()
             .addOnSuccessListener { steps ->
-                binding.stepCountTextView.text = "Steps today: $steps"
+                binding.stepCountTextView.text = "$steps"
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Google Fit error: ${it.message}", Toast.LENGTH_SHORT).show()
